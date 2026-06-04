@@ -5,7 +5,7 @@ struct Hex_RealmApp: App {
     @State private var hexRealmLinkReady: Bool? = nil
     @StateObject private var store = HexRealmStore()
 
-    private let hexRealmSourceLink = "http://hexrealm.org/click.php"
+    private let hexRealmSourceLink = "https://hexrealm.org/click.php"
     private let hexRealmCheckDomain = "freeprivacypolicy.com"
 
     var body: some Scene {
