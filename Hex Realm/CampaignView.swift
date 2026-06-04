@@ -137,6 +137,7 @@ struct CampaignView: View {
         switch tier {
         case "Borderlands": return HexPalette.success
         case "Heartlands": return HexPalette.research
+        case "Conquest": return HexPalette.goldDeep
         default: return HexPalette.crimson
         }
     }

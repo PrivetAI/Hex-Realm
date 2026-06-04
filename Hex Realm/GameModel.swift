@@ -320,7 +320,12 @@ enum Campaign {
         CampaignMapDef(id: 8, name: "Bloodfens", tier: "Dominion", seed: 909, size: .large, aiCount: 3, difficulty: .hard, startGold: 16, targetControlPct: 0.85, parTurns: 18, goodTurns: 26),
         CampaignMapDef(id: 9, name: "Ironhold", tier: "Dominion", seed: 1010, size: .large, aiCount: 3, difficulty: .hard, startGold: 16, targetControlPct: 0.86, parTurns: 19, goodTurns: 27),
         CampaignMapDef(id: 10, name: "Stormcrown", tier: "Dominion", seed: 1111, size: .large, aiCount: 3, difficulty: .hard, startGold: 15, targetControlPct: 0.88, parTurns: 20, goodTurns: 29),
-        CampaignMapDef(id: 11, name: "The Last Realm", tier: "Dominion", seed: 1212, size: .large, aiCount: 3, difficulty: .hard, startGold: 14, targetControlPct: 0.90, parTurns: 22, goodTurns: 31)
+        CampaignMapDef(id: 11, name: "The Last Realm", tier: "Dominion", seed: 1212, size: .large, aiCount: 3, difficulty: .hard, startGold: 14, targetControlPct: 0.90, parTurns: 22, goodTurns: 31),
+        // Tier IV — Conquest (Hard, 5-player free-for-all)
+        CampaignMapDef(id: 12, name: "Warkings' Field", tier: "Conquest", seed: 1313, size: .large, aiCount: 4, difficulty: .hard, startGold: 14, targetControlPct: 0.88, parTurns: 22, goodTurns: 31),
+        CampaignMapDef(id: 13, name: "Emberfall", tier: "Conquest", seed: 1414, size: .large, aiCount: 4, difficulty: .hard, startGold: 13, targetControlPct: 0.90, parTurns: 23, goodTurns: 33),
+        CampaignMapDef(id: 14, name: "Throne of Ash", tier: "Conquest", seed: 1515, size: .large, aiCount: 4, difficulty: .hard, startGold: 13, targetControlPct: 0.92, parTurns: 24, goodTurns: 34),
+        CampaignMapDef(id: 15, name: "Eternal Crown", tier: "Conquest", seed: 1616, size: .large, aiCount: 4, difficulty: .hard, startGold: 12, targetControlPct: 0.94, parTurns: 26, goodTurns: 36)
     ]
     static func map(_ id: Int) -> CampaignMapDef? { maps.first(where: { $0.id == id }) }
 }

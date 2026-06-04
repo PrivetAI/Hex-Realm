@@ -26,7 +26,13 @@ enum HexAchievements {
         HexAchievement(id: "ten_wins", title: "Seasoned Warlord", detail: "Win 10 matches total.", color: HexPalette.gold),
         HexAchievement(id: "big_army", title: "Grand Host", detail: "Field a single stack of 40+ armies.", color: HexPalette.success),
         HexAchievement(id: "comeback", title: "Against the Odds", detail: "Win after being reduced to 2 hexes or fewer.", color: HexPalette.crimsonDeep),
-        HexAchievement(id: "builder", title: "Master Builder", detail: "Construct 10 buildings across your matches.", color: HexPalette.gold)
+        HexAchievement(id: "builder", title: "Master Builder", detail: "Construct 10 buildings across your matches.", color: HexPalette.gold),
+        HexAchievement(id: "dominion_clear", title: "Dominion Warlord", detail: "Clear all Dominion campaign maps.", color: HexPalette.danger),
+        HexAchievement(id: "conquest_clear", title: "Conquest Crowned", detail: "Clear all Conquest campaign maps.", color: HexPalette.goldDeep),
+        HexAchievement(id: "five_player", title: "Last One Standing", detail: "Win a 5-player free-for-all battle.", color: HexPalette.gold),
+        HexAchievement(id: "streak_5", title: "Unstoppable", detail: "Win 5 matches in a row.", color: HexPalette.crimson),
+        HexAchievement(id: "veteran_25", title: "War Veteran", detail: "Win 25 matches in total.", color: HexPalette.crimsonDeep),
+        HexAchievement(id: "captures_200", title: "Land Grabber", detail: "Capture 200 hexes in total.", color: HexPalette.success)
     ]
     static func def(_ id: String) -> HexAchievement? { all.first(where: { $0.id == id }) }
 }
@@ -40,5 +46,23 @@ struct HexStats: Codable {
     var upgradesBought: Int = 0
     var factionsWonWith: [Int] = []      // faction ids
     var bestStreak: Int = 0
+    var currentStreak: Int = 0           // active win streak (reset on loss)
     var fastestWinTurns: Int = 0         // 0 == none
+
+    init() {}
+
+    // Resilient decode: every field falls back to its default when absent, so
+    // adding new stat fields never invalidates an existing player's save.
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        totalWins       = (try? c.decode(Int.self,   forKey: .totalWins)) ?? 0
+        totalMatches    = (try? c.decode(Int.self,   forKey: .totalMatches)) ?? 0
+        totalCaptures   = (try? c.decode(Int.self,   forKey: .totalCaptures)) ?? 0
+        buildingsBuilt  = (try? c.decode(Int.self,   forKey: .buildingsBuilt)) ?? 0
+        upgradesBought  = (try? c.decode(Int.self,   forKey: .upgradesBought)) ?? 0
+        factionsWonWith = (try? c.decode([Int].self, forKey: .factionsWonWith)) ?? []
+        bestStreak      = (try? c.decode(Int.self,   forKey: .bestStreak)) ?? 0
+        currentStreak   = (try? c.decode(Int.self,   forKey: .currentStreak)) ?? 0
+        fastestWinTurns = (try? c.decode(Int.self,   forKey: .fastestWinTurns)) ?? 0
+    }
 }

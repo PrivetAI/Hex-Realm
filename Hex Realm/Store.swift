@@ -138,6 +138,7 @@ final class HexRealmStore: ObservableObject {
             if !progress.unlockedAchievements.contains("first_capture") {
                 unlock("first_capture")
             }
+            if progress.stats.totalCaptures >= 200 { unlock("captures_200") }
         }
         // track lowest hex count for comeback achievement
         matchMinHexes = min(matchMinHexes, m.ownedCount(0))
@@ -179,6 +180,8 @@ final class HexRealmStore: ObservableObject {
         progress.stats.totalMatches += 1
         if m.outcome == .victory {
             progress.stats.totalWins += 1
+            progress.stats.currentStreak += 1
+            progress.stats.bestStreak = max(progress.stats.bestStreak, progress.stats.currentStreak)
             let factionId = m.players[0].factionId
 
             unlock("first_win")
@@ -189,6 +192,9 @@ final class HexRealmStore: ObservableObject {
                 unlock("all_factions")
             }
             if progress.stats.totalWins >= 10 { unlock("ten_wins") }
+            if progress.stats.totalWins >= 25 { unlock("veteran_25") }
+            if progress.stats.currentStreak >= 5 { unlock("streak_5") }
+            if m.players.count >= 5 { unlock("five_player") }
             if m.turn <= 8 { unlock("fast_win") }
             if progress.stats.fastestWinTurns == 0 || m.turn < progress.stats.fastestWinTurns {
                 progress.stats.fastestWinTurns = m.turn
@@ -210,6 +216,9 @@ final class HexRealmStore: ObservableObject {
                 if s >= 3 { unlock("three_star") }
                 evaluateCampaignTierAchievements()
             }
+        } else {
+            // streak ends on any non-victory outcome (defeat / abandoned loss)
+            progress.stats.currentStreak = 0
         }
         // Keep `activeMatch` in memory (with its terminal outcome) so MatchView
         // can present the Victory/Defeat overlay; just drop the persisted save so
@@ -223,8 +232,12 @@ final class HexRealmStore: ObservableObject {
     private func evaluateCampaignTierAchievements() {
         let borderlands = [0, 1, 2, 3]
         let heartlands = [4, 5, 6, 7]
+        let dominion = [8, 9, 10, 11]
+        let conquest = [12, 13, 14, 15]
         if borderlands.allSatisfy({ isCleared($0) }) { unlock("campaign_1") }
         if heartlands.allSatisfy({ isCleared($0) }) { unlock("campaign_2") }
+        if dominion.allSatisfy({ isCleared($0) }) { unlock("dominion_clear") }
+        if conquest.allSatisfy({ isCleared($0) }) { unlock("conquest_clear") }
         if Campaign.maps.allSatisfy({ isCleared($0.id) }) { unlock("campaign_all") }
         if Campaign.maps.allSatisfy({ (progress.campaignStars[$0.id] ?? 0) >= 3 }) {
             unlock("all_three_star")
