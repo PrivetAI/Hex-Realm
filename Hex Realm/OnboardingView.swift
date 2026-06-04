@@ -11,7 +11,7 @@ struct OnboardingView: View {
     }
     private let pages: [Page] = [
         Page(title: "Welcome, Commander",
-             body: "Hex Realm Conquest is a turn-based strategy game. You lead a faction to conquer a hex map, one territory at a time."),
+             body: "Hex Realm is a turn-based strategy game. You lead a faction to conquer a hex map, one territory at a time."),
         Page(title: "Grow Your Realm",
              body: "Each hex you own produces gold and grows its army every turn. Stronger terrain like hills and mountains defends better."),
         Page(title: "Select, Then Strike",

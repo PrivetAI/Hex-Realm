@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1000003000000000000001 /* Hex_Realm_ConquestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000003000000000000001 /* Hex_Realm_ConquestApp.swift */; };
+		A1000003000000000000001 /* Hex_RealmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000003000000000000001 /* Hex_RealmApp.swift */; };
 		A1000003000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000003000000000000002 /* ContentView.swift */; };
 		A1000003000000000000003 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000003000000000000003 /* RootTabView.swift */; };
 		A1000003000000000000004 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000003000000000000004 /* Theme.swift */; };
@@ -32,7 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B1000003000000000000001 /* Hex_Realm_ConquestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hex_Realm_ConquestApp.swift; sourceTree = "<group>"; };
+		B1000003000000000000001 /* Hex_RealmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hex_RealmApp.swift; sourceTree = "<group>"; };
 		B1000003000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B1000003000000000000003 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 		B1000003000000000000004 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		B1000003000000000000021 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		B1000003000000000000022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1000003000000000000023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1000003000000000000001 /* Hex Realm Conquest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hex Realm Conquest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1000003000000000000001 /* Hex Realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hex Realm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,15 +72,15 @@
 		E1000003000000000000001 = {
 			isa = PBXGroup;
 			children = (
-				E1000003000000000000002 /* Hex Realm Conquest */,
+				E1000003000000000000002 /* Hex Realm */,
 				E1000003000000000000003 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E1000003000000000000002 /* Hex Realm Conquest */ = {
+		E1000003000000000000002 /* Hex Realm */ = {
 			isa = PBXGroup;
 			children = (
-				B1000003000000000000001 /* Hex_Realm_ConquestApp.swift */,
+				B1000003000000000000001 /* Hex_RealmApp.swift */,
 				B1000003000000000000002 /* ContentView.swift */,
 				B1000003000000000000003 /* RootTabView.swift */,
 				B1000003000000000000004 /* Theme.swift */,
@@ -104,13 +104,13 @@
 				B1000003000000000000022 /* Assets.xcassets */,
 				B1000003000000000000023 /* Info.plist */,
 			);
-			path = "Hex Realm Conquest";
+			path = "Hex Realm";
 			sourceTree = "<group>";
 		};
 		E1000003000000000000003 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C1000003000000000000001 /* Hex Realm Conquest.app */,
+				C1000003000000000000001 /* Hex Realm.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,9 +118,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F1000003000000000000001 /* Hex Realm Conquest */ = {
+		F1000003000000000000001 /* Hex Realm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11000003000000000000001 /* Build configuration list for PBXNativeTarget "Hex Realm Conquest" */;
+			buildConfigurationList = 11000003000000000000001 /* Build configuration list for PBXNativeTarget "Hex Realm" */;
 			buildPhases = (
 				G1000003000000000000001 /* Sources */,
 				D1000003000000000000001 /* Frameworks */,
@@ -130,9 +130,9 @@
 			);
 			dependencies = (
 			);
-			name = "Hex Realm Conquest";
-			productName = "Hex Realm Conquest";
-			productReference = C1000003000000000000001 /* Hex Realm Conquest.app */;
+			name = "Hex Realm";
+			productName = "Hex Realm";
+			productReference = C1000003000000000000001 /* Hex Realm.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -150,7 +150,7 @@
 					};
 				};
 			};
-			buildConfigurationList = J1000003000000000000001 /* Build configuration list for PBXProject "Hex Realm Conquest" */;
+			buildConfigurationList = J1000003000000000000001 /* Build configuration list for PBXProject "Hex Realm" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -163,7 +163,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F1000003000000000000001 /* Hex Realm Conquest */,
+				F1000003000000000000001 /* Hex Realm */,
 			);
 		};
 /* End PBXProject section */
@@ -184,7 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1000003000000000000001 /* Hex_Realm_ConquestApp.swift in Sources */,
+				A1000003000000000000001 /* Hex_RealmApp.swift in Sources */,
 				A1000003000000000000002 /* ContentView.swift in Sources */,
 				A1000003000000000000003 /* RootTabView.swift in Sources */,
 				A1000003000000000000004 /* Theme.swift in Sources */,
@@ -336,7 +336,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Hex Realm Conquest/Info.plist";
+				INFOPLIST_FILE = "Hex Realm/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -344,7 +344,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hexrealmconquest.hexrealmconquest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hexrealm.hexrealm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -368,7 +368,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Hex Realm Conquest/Info.plist";
+				INFOPLIST_FILE = "Hex Realm/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -376,7 +376,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hexrealmconquest.hexrealmconquest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hexrealm.hexrealm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -392,7 +392,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		J1000003000000000000001 /* Build configuration list for PBXProject "Hex Realm Conquest" */ = {
+		J1000003000000000000001 /* Build configuration list for PBXProject "Hex Realm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				K1000003000000000000001 /* Debug */,
@@ -401,7 +401,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		11000003000000000000001 /* Build configuration list for PBXNativeTarget "Hex Realm Conquest" */ = {
+		11000003000000000000001 /* Build configuration list for PBXNativeTarget "Hex Realm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				L1000003000000000000001 /* Debug */,

@@ -16,7 +16,7 @@ struct MoreView: View {
                             FlatHexShape().fill(HexPalette.research).frame(width: 40, height: 40).offset(x: 16, y: 10)
                         }
                         .frame(height: 70)
-                        Text("Hex Realm Conquest")
+                        Text("Hex Realm")
                             .font(.system(size: 20, weight: .heavy, design: .rounded))
                             .foregroundColor(HexPalette.textPrimary)
                         Text("Turn-based territory strategy")

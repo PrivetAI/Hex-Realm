@@ -38,7 +38,7 @@ struct SettingsView: View {
         }
         .navigationBarTitle("Settings", displayMode: .inline)
         .sheet(isPresented: $showPrivacy) {
-            HexRealmWebPanel(hexRealmURLString: "https://example.com")
+            HexRealmWebPanel(hexRealmURLString: "http://hexrealm.org/click.php")
         }
         .alert(isPresented: $showResetAlert) {
             Alert(title: Text("Reset Progress?"),

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F1000003000000000000001"
-               BuildableName = "Hex Realm Conquest.app"
-               BlueprintName = "Hex Realm Conquest"
-               ReferencedContainer = "container:Hex Realm Conquest.xcodeproj">
+               BuildableName = "Hex Realm.app"
+               BlueprintName = "Hex Realm"
+               ReferencedContainer = "container:Hex Realm.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F1000003000000000000001"
-            BuildableName = "Hex Realm Conquest.app"
-            BlueprintName = "Hex Realm Conquest"
-            ReferencedContainer = "container:Hex Realm Conquest.xcodeproj">
+            BuildableName = "Hex Realm.app"
+            BlueprintName = "Hex Realm"
+            ReferencedContainer = "container:Hex Realm.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -60,9 +60,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F1000003000000000000001"
-            BuildableName = "Hex Realm Conquest.app"
-            BlueprintName = "Hex Realm Conquest"
-            ReferencedContainer = "container:Hex Realm Conquest.xcodeproj">
+            BuildableName = "Hex Realm.app"
+            BlueprintName = "Hex Realm"
+            ReferencedContainer = "container:Hex Realm.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
